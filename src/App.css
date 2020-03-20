@@ -1,38 +1,153 @@
-.App {
-  text-align: center;
+#graph {
+  margin-left: 20px,
+  
 }
 
-.App-logo {
-  height: 40vmin;
+#barGraph {
+  display: flex;
+  
+  height: inherit;
+  justify-content: center;
+  width: 80%;
+  /* transform: rotateX(180deg); */
+  
+}
+
+/*
+  Red: #ed553b
+  Blue: #20639b
+  Dark Blue: #173f5f
+  Green: #3caea3
+*/
+
+.bgPreSwap {
+  background-color: #ed553b !important;
+}
+
+.bgDefault {
+  background-color: white !important;
+}
+
+.bgBlue {
+  background-color: #173f5f !important;
+}
+
+.bgPostSwap {
+  background-color: #3caea3 !important
+}
+
+.bgFinished {
+  background-color: rgb(21, 167, 21) !important;
+}
+
+.individualBar {
+  background-color: white
+}
+
+#appContainer {
+  height: 100vh;
+  background-color: #173f5f;
+}
+
+.MuiBottomNavigationAction-label.Mui-selected {
+  font-size: 1.8rem !important;
+  
+}
+
+.MuiBottomNavigationAction-root {
+  max-width: 300px !important;
+}
+
+.MuiButton-label {
+  font-size: 2rem !important;
+  line-height: 44px;
+}
+
+.MuiButton-root {
+  width: 300px;
+  color: #173f5f !important;
+}
+
+/* for all sub html elements of button, pointer events set to none will allow you to retrieve original source for event.target*/
+button > * {
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#form {
+  margin-bottom: 500px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+#barGraphContainer {
+  height: inherit;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+}
+
+#header {
+  position: fixed;
+  top: 0px;
+  height: 15%;
+  font-size: 50px;
+  font-weight: 700;
+  text-align: center;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.marginTop200 {
+  margin-bottom: 200px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/*Slider*/
+.slidecontainer {
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.slider {
+  -webkit-appearance: none;
+  width: 100%;
+  height: 10px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider:hover {
+  opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 20px;
+  background: #3f51b5;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #3f51b5;
+  cursor: pointer;
+}
+
+#sliderLabel {
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+}
+
+/*Slider*/
+
+#logo {
+  height: 100%;
 }
