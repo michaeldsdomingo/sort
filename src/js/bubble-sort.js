@@ -1,5 +1,5 @@
 
-export function bubbleSort1(arr) {
+export function bubbleSortAlg(arr) {
         
        
     let array = [...arr]
