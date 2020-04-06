@@ -53,7 +53,7 @@ export default function BottomNav(props) {
   const [value, setValue] = React.useState(0);
   const [barNum, setBarNum] = React.useState(40);
   const [sortMethod, setSortMethod] = React.useState('mergeSort')
-  const [speed, setSpeed] = React.useState(10)
+  const [speed, setSpeed] = React.useState(50)
   const toggleSort = useSelector( state => state.toggleSort )
   const array = useSelector( state => state.array)
   const dispatch = useDispatch()
