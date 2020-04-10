@@ -50,7 +50,7 @@ const useStyles = makeStyles({
 
 export default function BottomNav(props) {
   const classes = useStyles();
-  const [value, setValue] = React.useState(0);
+  const [sortMethodValue, setSortMethodValue] = React.useState(0);
   const [barNum, setBarNum] = React.useState(40);
   const [sortMethod, setSortMethod] = React.useState('mergeSort')
   const [speed, setSpeed] = React.useState(50)
@@ -115,9 +115,12 @@ export default function BottomNav(props) {
 
   return (
     <BottomNavigation
-      value={value}
+      value={sortMethodValue}
       onChange={(event, newValue) => {
-        setValue(newValue);
+        if (newValue) {
+          setSortMethodValue(newValue);
+        }
+        
       }}
       showLabels
       className={classes.root}
